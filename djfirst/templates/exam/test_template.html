@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+{% load app_tags %}
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ABC</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet"  href="{% static 'css/question_paper.css' %}"> 
+</head>
+<body>
+    <h2>Template Tag,Css</h2>
+    <div>{% get_date %}</div>
+    {% if que %}
+   <h2 class="c1">{{que|upper|quote}}</h2>
+    <input type="radio" name="option" value="a">{{a}}<br> 
+    <input type="radio" name="option" value="b">{{b}}<br>
+    <input type="radio" name="option" value="c">{{c}}<br>
+    <input type="radio" name="option" value="d">{{d}}<br>
+    <input type="submit" name="submit" value="submit">
+{% else %}
+<div>no question found</div>
+{% endif %}
+</body>
+</html>
